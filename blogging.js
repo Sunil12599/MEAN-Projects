@@ -23,6 +23,7 @@ function getBlogData(){
     storeData(blog_title,blog_desc,blog_image)
     postBlog(blog_title,blog_desc,blog_image)
     clearBlogForm()
+    alert("post is posted successfully")
 }
 
 function postBlog(title,desc,img){
@@ -61,6 +62,7 @@ function retreiveData(){
         console.log("------ " + title + " " + desc + " " + img +  " ------")
         postBlog(title,desc,img)
     }
+    alert("post is retrived in console")
 }
 
 function get_inner_HTML(title,desc,img){
@@ -93,6 +95,7 @@ function clearBlogForm(){
     document.getElementById("title").value = ""
     document.getElementById("desc").value = ""
     document.getElementById("img").value = ""
+    alert("text cleared")
 }
 
 // Storage Functions
@@ -126,4 +129,5 @@ function storeData(title,desc,img){
 
 function clearLocalStorage(){
     localStorage.clear()
+
 }
